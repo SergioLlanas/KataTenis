@@ -7,7 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout develop
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          tools: composer:v2
+          php-version: '4'
 
       - name: Check files
       - run: ls -al
