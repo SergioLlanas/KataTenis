@@ -16,4 +16,4 @@ jobs:
           php-version: '4'
 
       - name: Check files
-      - run: ls -al
+        run: ls -al
