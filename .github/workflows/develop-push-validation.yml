@@ -15,5 +15,8 @@ jobs:
           tools: composer:v2
           php-version: '4'
 
-      - name: Check files
-        run: ls -al
+      - name: install project dependencies
+        run: composer install
+
+      - name: Run unit tests
+        run: /vendor/bin/phpunit -c phpunit.xml
