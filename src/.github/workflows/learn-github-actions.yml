@@ -1,5 +1,5 @@
 name: learn-github-actions
-on: [push]
+on: [pull]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
@@ -8,3 +8,5 @@ jobs:
       - uses: actions/setup-node@v1
       - run: npm install -g bats
       - run: bats -v
+      - run: git pull origin master
+      - run: ls -al
